@@ -2,4 +2,4 @@ This is a password manager program that stores and updates a locally-hosted Save
 
 The program also features exception handling in the event SavedPasswords.json doesn't exist or is empty of information. The program also includes a feature allowing the user to search SavedPasswords.json for their credentials pertaining to a given website.
 
-Additionally, this program features a "How to Use App" button that when clicked will provide the user with a written explaination of how the app works. It also features a "search mode" functionality that will allow the user to make the program search 'SavedPasswords.json' for the credentials of a particular website or make it search for the credentials for multiple websites at once. 
+Additionally, this program features a "How to Use App" button that when clicked will provide the user with a written explaination of how the app works. It also features a "search mode" functionality that will allow the user to make the program search 'SavedPasswords.json' for the credentials of a particular website or make it search for the credentials of multiple websites at once. 
