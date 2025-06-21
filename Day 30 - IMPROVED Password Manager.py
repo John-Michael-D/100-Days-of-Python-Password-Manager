@@ -85,16 +85,28 @@ def searchJSON():
             success = 1
             if inputWebsite == "all":
                 for n in range(0,len(keysList)):
+                    input1.delete(0,END)
+                    input2.delete(0, END)
+                    input3.delete(0, END)
                     storedEmailUsername = data[keysList[n]]["Email/Username"]
                     storedPassword = data[keysList[n]]["Password"]
+                    input1.insert(END, string=keysList[n])
+                    input2.insert(END, string=storedEmailUsername)
+                    input3.insert(END, string=storedPassword)
                     messagebox.showinfo(title=f"Information for {keysList[n]}",
                     message=f"Email/Username for {keysList[n]}: \n{storedEmailUsername}"
                     f"\n\nPassword for {keysList[n]}: \n{storedPassword}")
             elif selection == 1:
                 if inputWebsite in keysList:
+                    input1.delete(0, END)
+                    input2.delete(0, END)
+                    input3.delete(0, END)
                     storedEmailUsername = data[inputWebsite]["Email/Username"]
                     storedPassword = data[inputWebsite]["Password"]
-                    searchInformation = messagebox.showinfo(title=f"Information for {inputWebsite}",
+                    input1.insert(END, string=inputWebsite)
+                    input2.insert(END, string=storedEmailUsername)
+                    input3.insert(END, string=storedPassword)
+                    messagebox.showinfo(title=f"Information for {inputWebsite}",
                     message=f"Email/Username for {inputWebsite}: \n{storedEmailUsername}"
                     f"\n\nPassword for {inputWebsite}: \n{storedPassword}")
                 else:
@@ -109,9 +121,15 @@ def searchJSON():
                 if success == 1:
                     for n in range(0,len(keysList) + 1):
                         if inputWebsite in keysList[n]:
+                            input1.delete(0, END)
+                            input2.delete(0, END)
+                            input3.delete(0, END)
                             storedEmailUsername = data[keysList[n]]["Email/Username"]
                             storedPassword = data[keysList[n]]["Password"]
-                            searchInformation = messagebox.showinfo(title=f"Information for {keysList[n]}",
+                            input1.insert(END, string=keysList[n])
+                            input2.insert(END, string=storedEmailUsername)
+                            input3.insert(END, string=storedPassword)
+                            messagebox.showinfo(title=f"Information for {keysList[n]}",
                             message=f"Email/Username for {keysList[n]}: \n{storedEmailUsername}"
                             f"\n\nPassword for {keysList[n]}: \n{storedPassword}")
     except KeyError:
